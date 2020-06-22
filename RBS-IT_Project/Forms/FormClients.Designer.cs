@@ -50,7 +50,7 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::RBS_IT_Project.Properties.Resources.logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 310);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(7, 306);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(260, 40);
             this.pictureBoxLogo.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.labelName.Location = new System.Drawing.Point(13, 13);
+            this.labelName.Location = new System.Drawing.Point(8, 9);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(169, 22);
             this.labelName.TabIndex = 2;
@@ -69,7 +69,7 @@
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.textBoxName.Location = new System.Drawing.Point(17, 39);
+            this.textBoxName.Location = new System.Drawing.Point(12, 35);
             this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(165, 26);
@@ -78,7 +78,7 @@
             // textBoxPhone
             // 
             this.textBoxPhone.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.textBoxPhone.Location = new System.Drawing.Point(205, 40);
+            this.textBoxPhone.Location = new System.Drawing.Point(200, 36);
             this.textBoxPhone.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(165, 26);
@@ -88,7 +88,7 @@
             // 
             this.labelPhone.AutoSize = true;
             this.labelPhone.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.labelPhone.Location = new System.Drawing.Point(201, 14);
+            this.labelPhone.Location = new System.Drawing.Point(196, 10);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(77, 22);
             this.labelPhone.TabIndex = 4;
@@ -97,7 +97,7 @@
             // textBoxEmail
             // 
             this.textBoxEmail.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.textBoxEmail.Location = new System.Drawing.Point(393, 40);
+            this.textBoxEmail.Location = new System.Drawing.Point(388, 36);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(239, 26);
@@ -107,7 +107,7 @@
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.labelEmail.Location = new System.Drawing.Point(389, 14);
+            this.labelEmail.Location = new System.Drawing.Point(384, 10);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(51, 22);
             this.labelEmail.TabIndex = 6;
@@ -124,7 +124,7 @@
             this.listViewClients.FullRowSelect = true;
             this.listViewClients.GridLines = true;
             this.listViewClients.HideSelection = false;
-            this.listViewClients.Location = new System.Drawing.Point(17, 72);
+            this.listViewClients.Location = new System.Drawing.Point(12, 68);
             this.listViewClients.MultiSelect = false;
             this.listViewClients.Name = "listViewClients";
             this.listViewClients.Size = new System.Drawing.Size(615, 232);
@@ -158,7 +158,7 @@
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAdd.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonAdd.Location = new System.Drawing.Point(278, 309);
+            this.buttonAdd.Location = new System.Drawing.Point(273, 305);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(114, 40);
             this.buttonAdd.TabIndex = 9;
@@ -172,7 +172,7 @@
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonEdit.Location = new System.Drawing.Point(398, 309);
+            this.buttonEdit.Location = new System.Drawing.Point(393, 305);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(114, 40);
             this.buttonEdit.TabIndex = 10;
@@ -186,7 +186,7 @@
             this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDelete.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonDelete.Location = new System.Drawing.Point(518, 309);
+            this.buttonDelete.Location = new System.Drawing.Point(513, 305);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(114, 40);
             this.buttonDelete.TabIndex = 11;

@@ -21,10 +21,16 @@ namespace RBS_IT_Project.Forms
                     user.Password = textBoxNewPassword.Text;
                     Program.RBS_Project.SaveChanges();
                     MessageBox.Show("Пароль успешно сменен.", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
                 }
                 else MessageBox.Show("Пароли не совпадают", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else MessageBox.Show("Заполните все поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void textBoxLogin_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) buttonChange.PerformClick();
         }
     }
 }

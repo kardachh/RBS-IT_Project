@@ -12,25 +12,23 @@ namespace RBS_IT_Project
     using System;
     using System.Collections.Generic;
     
-    public partial class StaffSet
+    public partial class DepartmentsSet
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public StaffSet()
+        public DepartmentsSet()
         {
-            this.Users = new HashSet<Users>();
+            this.ServicesSet = new HashSet<ServicesSet>();
+            this.StaffSet = new HashSet<StaffSet>();
         }
     
         public int Id { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string MiddleName { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string Position { get; set; }
-        public Nullable<int> Id_Department { get; set; }
+        public string Name { get; set; }
+        public int Count { get; set; }
+        public string Manager { get; set; }
     
-        public virtual DepartmentsSet DepartmentsSet { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Users> Users { get; set; }
+        public virtual ICollection<ServicesSet> ServicesSet { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StaffSet> StaffSet { get; set; }
     }
 }

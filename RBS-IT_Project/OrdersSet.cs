@@ -17,13 +17,11 @@ namespace RBS_IT_Project
         public int Id { get; set; }
         public int Id_Service { get; set; }
         public int Id_Client { get; set; }
-        public int Id_Staff { get; set; }
         public System.DateTime Date { get; set; }
         public System.DateTime Deadline { get; set; }
         public string Status { get; set; }
     
         public virtual ClientsSet ClientsSet { get; set; }
         public virtual ServicesSet ServicesSet { get; set; }
-        public virtual StaffSet StaffSet { get; set; }
     }
 }

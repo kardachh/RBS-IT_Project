@@ -9,6 +9,7 @@ namespace RBS_IT_Project.Forms
         {
             InitializeComponent();
             ShowServices();
+            ShowDepartments();
             if (FormAuthorization.users.type != "admin")
             {
                 buttonAdd.Enabled = false;
@@ -29,11 +30,12 @@ namespace RBS_IT_Project.Forms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text != "" && textBoxPrice.Text != "")
+            if (textBoxName.Text != "" && textBoxPrice.Text != "" && comboBoxDepartment.SelectedItem != null)
             {
                 ServicesSet servicesSet = new ServicesSet();
                 servicesSet.Name = textBoxName.Text;
                 servicesSet.Price = Convert.ToInt32(textBoxPrice.Text);
+                servicesSet.Id_Department = Convert.ToInt32(comboBoxDepartment.SelectedItem.ToString().Split('.')[0]);
                 Program.RBS_Project.ServicesSet.Add(servicesSet);
                 Program.RBS_Project.SaveChanges();
                 ShowServices();
@@ -45,11 +47,12 @@ namespace RBS_IT_Project.Forms
         {
             if (listViewServises.SelectedItems.Count == 1)
             {
-                if (textBoxName.Text != "" && textBoxPrice.Text != "")
+                if (textBoxName.Text != "" && textBoxPrice.Text != "" && comboBoxDepartment.SelectedItem != null)
                 {
                     ServicesSet servicesSet = listViewServises.SelectedItems[0].Tag as ServicesSet;
                     servicesSet.Name = textBoxName.Text;
                     servicesSet.Price = Convert.ToInt32(textBoxPrice.Text);
+                    servicesSet.Id_Department = Convert.ToInt32(comboBoxDepartment.SelectedItem.ToString().Split('.')[0]);
                     Program.RBS_Project.SaveChanges();
                     ShowServices();
                 }
@@ -70,6 +73,7 @@ namespace RBS_IT_Project.Forms
                 }
                 textBoxName.Text = "";
                 textBoxPrice.Text = "";
+                comboBoxDepartment.SelectedItem = null;
             }
             catch { MessageBox.Show("Невозможно удалить, эта запись используется!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
@@ -81,11 +85,13 @@ namespace RBS_IT_Project.Forms
                 ServicesSet services = listViewServises.SelectedItems[0].Tag as ServicesSet;
                 textBoxName.Text = services.Name;
                 textBoxPrice.Text = services.Price.ToString();
+                comboBoxDepartment.SelectedIndex = comboBoxDepartment.FindString(services.Id_Department.ToString());
             }
             else
             {
                 textBoxName.Text = "";
                 textBoxPrice.Text = "";
+                comboBoxDepartment.SelectedItem = null;
             }
         }
         void ShowServices()
@@ -97,12 +103,22 @@ namespace RBS_IT_Project.Forms
                 {
                     services.Id.ToString(),
                     services.Name,
+                    services.DepartmentsSet.Name,
                     services.Price.ToString()+" руб."
                 });
                 item.Tag = services;
                 listViewServises.Items.Add(item);
             }
             listViewServises.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+        }
+        void ShowDepartments()
+        {
+            comboBoxDepartment.Items.Clear();
+            foreach (DepartmentsSet departments in Program.RBS_Project.DepartmentsSet)
+            {
+                string[] item = { departments.Id.ToString() + ". ", departments.Name };
+                comboBoxDepartment.Items.Add(string.Join(" ", item));
+            }
         }
     }
 }

@@ -32,10 +32,11 @@
             this.buttonOpenStaff = new System.Windows.Forms.Button();
             this.buttonOpenOrders = new System.Windows.Forms.Button();
             this.buttonOpenServiсes = new System.Windows.Forms.Button();
-            this.buttonOpenHistory = new System.Windows.Forms.Button();
+            this.buttonOpenDepartments = new System.Windows.Forms.Button();
             this.buttonOpenClients = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelHello = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,18 +82,19 @@
             this.buttonOpenServiсes.UseVisualStyleBackColor = false;
             this.buttonOpenServiсes.Click += new System.EventHandler(this.buttonOpenServiсes_Click);
             // 
-            // buttonOpenHistory
+            // buttonOpenDepartments
             // 
-            this.buttonOpenHistory.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonOpenHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
-            this.buttonOpenHistory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonOpenHistory.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonOpenHistory.Location = new System.Drawing.Point(12, 275);
-            this.buttonOpenHistory.Name = "buttonOpenHistory";
-            this.buttonOpenHistory.Size = new System.Drawing.Size(260, 40);
-            this.buttonOpenHistory.TabIndex = 6;
-            this.buttonOpenHistory.Text = "История";
-            this.buttonOpenHistory.UseVisualStyleBackColor = false;
+            this.buttonOpenDepartments.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonOpenDepartments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
+            this.buttonOpenDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOpenDepartments.Font = new System.Drawing.Font("Open Sans", 14F);
+            this.buttonOpenDepartments.Location = new System.Drawing.Point(12, 275);
+            this.buttonOpenDepartments.Name = "buttonOpenDepartments";
+            this.buttonOpenDepartments.Size = new System.Drawing.Size(260, 40);
+            this.buttonOpenDepartments.TabIndex = 6;
+            this.buttonOpenDepartments.Text = "Отделы";
+            this.buttonOpenDepartments.UseVisualStyleBackColor = false;
+            this.buttonOpenDepartments.Click += new System.EventHandler(this.buttonOpenDepartments_Click);
             // 
             // buttonOpenClients
             // 
@@ -127,15 +129,30 @@
             this.labelHello.TabIndex = 8;
             this.labelHello.Text = "Добро пожаловать, ";
             // 
+            // buttonExit
+            // 
+            this.buttonExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonExit.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonExit.Font = new System.Drawing.Font("Open Sans", 14F);
+            this.buttonExit.Location = new System.Drawing.Point(59, 321);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(165, 40);
+            this.buttonExit.TabIndex = 9;
+            this.buttonExit.Text = "Выйти";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(284, 321);
+            this.ClientSize = new System.Drawing.Size(284, 371);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelHello);
             this.Controls.Add(this.buttonOpenClients);
-            this.Controls.Add(this.buttonOpenHistory);
+            this.Controls.Add(this.buttonOpenDepartments);
             this.Controls.Add(this.buttonOpenServiсes);
             this.Controls.Add(this.buttonOpenOrders);
             this.Controls.Add(this.buttonOpenStaff);
@@ -145,8 +162,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 360);
-            this.MinimumSize = new System.Drawing.Size(300, 360);
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Меню";
@@ -163,9 +178,10 @@
         private System.Windows.Forms.Button buttonOpenStaff;
         private System.Windows.Forms.Button buttonOpenOrders;
         private System.Windows.Forms.Button buttonOpenServiсes;
-        private System.Windows.Forms.Button buttonOpenHistory;
+        private System.Windows.Forms.Button buttonOpenDepartments;
         private System.Windows.Forms.Button buttonOpenClients;
         private System.Windows.Forms.Label labelHello;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
 

@@ -6,7 +6,7 @@ namespace RBS_IT_Project
 {
     static class Program
     {
-        public static Entities2 RBS_Project = new Entities2();
+        public static Entities RBS_Project = new Entities();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

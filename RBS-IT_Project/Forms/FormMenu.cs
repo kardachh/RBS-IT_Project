@@ -41,6 +41,17 @@ namespace RBS_IT_Project
         {
             authorization.Show();
         }
+
+        private void buttonOpenDepartments_Click(object sender, EventArgs e)
+        {
+            Form formDepartments = new FormDepartments();
+            formDepartments.Show();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 
 }

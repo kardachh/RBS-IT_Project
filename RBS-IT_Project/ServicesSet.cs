@@ -23,7 +23,9 @@ namespace RBS_IT_Project
         public int Id { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
+        public int Id_Department { get; set; }
     
+        public virtual DepartmentsSet DepartmentsSet { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrdersSet> OrdersSet { get; set; }
     }

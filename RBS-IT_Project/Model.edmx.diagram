@@ -4,15 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="174c8bf615214e92b1890652c71ae2fb" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.ClientsSet" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OrdersSet" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.ServicesSet" Width="1.5" PointX="5.75" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.StaffSet" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Users" Width="1.5" PointX="0.5" PointY="6.75" IsExpanded="true" />
+      <Diagram DiagramId="04214457923c46228cd05612d2f2fba2" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.ClientsSet" Width="1.5" PointX="9.875" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DepartmentsSet" Width="1.5" PointX="2.625" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OrdersSet" Width="1.5" PointX="6.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ServicesSet" Width="1.5" PointX="2.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.StaffSet" Width="1.5" PointX="6.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Users" Width="1.5" PointX="10" PointY="4.625" IsExpanded="true" />
         <AssociationConnector Association="Model.FK_Orders_ClientsSet" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Orders_ServicesSet" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Orders_StaffSet" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ServicesSet_DepartmentsSet" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_StaffSet_DepartmentsSet" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_OrdersSet_ServicesSet" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Users_StaffSet" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

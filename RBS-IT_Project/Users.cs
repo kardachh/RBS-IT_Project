@@ -18,7 +18,7 @@ namespace RBS_IT_Project
         public string Login { get; set; }
         public string Password { get; set; }
         public string Type { get; set; }
-        public int Id_Staff { get; set; }
+        public Nullable<int> Id_Staff { get; set; }
     
         public virtual StaffSet StaffSet { get; set; }
     }

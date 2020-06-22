@@ -60,6 +60,7 @@
             this.textBoxOldPassword.Size = new System.Drawing.Size(181, 26);
             this.textBoxOldPassword.TabIndex = 10;
             this.textBoxOldPassword.UseSystemPasswordChar = true;
+            this.textBoxOldPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxLogin_KeyUp);
             // 
             // labelOldPassword
             // 
@@ -79,6 +80,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(181, 26);
             this.textBoxLogin.TabIndex = 8;
+            this.textBoxLogin.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxLogin_KeyUp);
             // 
             // labelLogin
             // 
@@ -99,6 +101,7 @@
             this.textBoxNewPassword.Size = new System.Drawing.Size(181, 26);
             this.textBoxNewPassword.TabIndex = 12;
             this.textBoxNewPassword.UseSystemPasswordChar = true;
+            this.textBoxNewPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxLogin_KeyUp);
             // 
             // labelNewPassword
             // 
@@ -125,6 +128,7 @@
             this.buttonChange.Text = "Сменить пароль";
             this.buttonChange.UseVisualStyleBackColor = false;
             this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
+            this.buttonChange.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxLogin_KeyUp);
             // 
             // textBoxRepeat
             // 
@@ -134,6 +138,7 @@
             this.textBoxRepeat.Size = new System.Drawing.Size(181, 26);
             this.textBoxRepeat.TabIndex = 21;
             this.textBoxRepeat.UseSystemPasswordChar = true;
+            this.textBoxRepeat.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxLogin_KeyUp);
             // 
             // labelRepeat
             // 
@@ -170,6 +175,7 @@
             this.Name = "FormChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Смена пароля";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxLogin_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

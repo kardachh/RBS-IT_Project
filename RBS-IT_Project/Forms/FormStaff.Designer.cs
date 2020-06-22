@@ -51,7 +51,10 @@
             this.Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Department = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonRegistration = new System.Windows.Forms.Button();
+            this.labelDepartment = new System.Windows.Forms.Label();
+            this.comboBoxDepartment = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +64,7 @@
             this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDelete.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonDelete.Location = new System.Drawing.Point(721, 354);
+            this.buttonDelete.Location = new System.Drawing.Point(815, 413);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(141, 40);
             this.buttonDelete.TabIndex = 15;
@@ -75,7 +78,7 @@
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonEdit.Location = new System.Drawing.Point(574, 354);
+            this.buttonEdit.Location = new System.Drawing.Point(668, 413);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(141, 40);
             this.buttonEdit.TabIndex = 14;
@@ -89,7 +92,7 @@
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAdd.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonAdd.Location = new System.Drawing.Point(427, 354);
+            this.buttonAdd.Location = new System.Drawing.Point(521, 413);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(141, 40);
             this.buttonAdd.TabIndex = 13;
@@ -100,7 +103,7 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::RBS_IT_Project.Properties.Resources.logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(17, 354);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(17, 413);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(260, 40);
             this.pictureBoxLogo.TabIndex = 12;
@@ -221,7 +224,8 @@
             this.FIO,
             this.Phone,
             this.Email,
-            this.Position});
+            this.Position,
+            this.Department});
             this.listViewStaff.Font = new System.Drawing.Font("Open Sans", 10F);
             this.listViewStaff.FullRowSelect = true;
             this.listViewStaff.GridLines = true;
@@ -229,7 +233,7 @@
             this.listViewStaff.Location = new System.Drawing.Point(212, 13);
             this.listViewStaff.MultiSelect = false;
             this.listViewStaff.Name = "listViewStaff";
-            this.listViewStaff.Size = new System.Drawing.Size(650, 327);
+            this.listViewStaff.Size = new System.Drawing.Size(744, 382);
             this.listViewStaff.TabIndex = 28;
             this.listViewStaff.UseCompatibleStateImageBehavior = false;
             this.listViewStaff.View = System.Windows.Forms.View.Details;
@@ -259,13 +263,18 @@
             this.Position.Text = "Должность";
             this.Position.Width = 108;
             // 
+            // Department
+            // 
+            this.Department.Text = "Отдел";
+            this.Department.Width = 87;
+            // 
             // buttonRegistration
             // 
             this.buttonRegistration.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonRegistration.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonRegistration.Location = new System.Drawing.Point(280, 354);
+            this.buttonRegistration.Location = new System.Drawing.Point(374, 413);
             this.buttonRegistration.Name = "buttonRegistration";
             this.buttonRegistration.Size = new System.Drawing.Size(141, 40);
             this.buttonRegistration.TabIndex = 29;
@@ -273,12 +282,33 @@
             this.buttonRegistration.UseVisualStyleBackColor = false;
             this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
+            // labelDepartment
+            // 
+            this.labelDepartment.AutoSize = true;
+            this.labelDepartment.ForeColor = System.Drawing.Color.White;
+            this.labelDepartment.Location = new System.Drawing.Point(13, 343);
+            this.labelDepartment.Name = "labelDepartment";
+            this.labelDepartment.Size = new System.Drawing.Size(56, 22);
+            this.labelDepartment.TabIndex = 30;
+            this.labelDepartment.Text = "Отдел";
+            // 
+            // comboBoxDepartment
+            // 
+            this.comboBoxDepartment.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.comboBoxDepartment.FormattingEnabled = true;
+            this.comboBoxDepartment.Location = new System.Drawing.Point(17, 369);
+            this.comboBoxDepartment.Name = "comboBoxDepartment";
+            this.comboBoxDepartment.Size = new System.Drawing.Size(177, 26);
+            this.comboBoxDepartment.TabIndex = 31;
+            // 
             // FormStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(869, 401);
+            this.ClientSize = new System.Drawing.Size(968, 465);
+            this.Controls.Add(this.comboBoxDepartment);
+            this.Controls.Add(this.labelDepartment);
             this.Controls.Add(this.buttonRegistration);
             this.Controls.Add(this.listViewStaff);
             this.Controls.Add(this.textBoxPosition);
@@ -302,9 +332,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(885, 440);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(885, 440);
             this.Name = "FormStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сотрудники";
@@ -339,5 +367,8 @@
         private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.ColumnHeader Position;
         private System.Windows.Forms.Button buttonRegistration;
+        private System.Windows.Forms.ColumnHeader Department;
+        private System.Windows.Forms.Label labelDepartment;
+        private System.Windows.Forms.ComboBox comboBoxDepartment;
     }
 }

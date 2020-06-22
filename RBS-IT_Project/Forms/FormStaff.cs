@@ -9,6 +9,7 @@ namespace RBS_IT_Project.Forms
         {
             InitializeComponent();
             ShowStaff();
+            ShowDepartments();
             if (FormAuthorization.users.type != "admin")
             {
                 buttonAdd.Enabled = false;
@@ -39,7 +40,7 @@ namespace RBS_IT_Project.Forms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (textBoxLastName.Text != "" && textBoxFirstName.Text != "" 
+            if (textBoxLastName.Text != "" && textBoxFirstName.Text != ""
                 && textBoxMiddleName.Text != "" && textBoxPhone.Text != ""
                 && textBoxEmail.Text != "" && textBoxPosition.Text != "")
             {
@@ -50,6 +51,8 @@ namespace RBS_IT_Project.Forms
                 staffSet.Phone = textBoxPhone.Text;
                 staffSet.Email = textBoxEmail.Text;
                 staffSet.Position = textBoxPosition.Text;
+                if (comboBoxDepartment.SelectedItem != null)
+                    staffSet.Id_Department = Convert.ToInt32(comboBoxDepartment.SelectedItem.ToString().Split('.')[0]);
                 Program.RBS_Project.StaffSet.Add(staffSet);
                 Program.RBS_Project.SaveChanges();
                 ShowStaff();
@@ -72,6 +75,9 @@ namespace RBS_IT_Project.Forms
                     staffSet.Phone = textBoxPhone.Text;
                     staffSet.Email = textBoxEmail.Text;
                     staffSet.Position = textBoxPosition.Text;
+                    if (comboBoxDepartment.SelectedItem != null)
+                        staffSet.Id_Department = Convert.ToInt32(comboBoxDepartment.SelectedItem.ToString().Split('.')[0]);
+                    else staffSet.Id_Department = null;
                     Program.RBS_Project.SaveChanges();
                     ShowStaff();
                 }
@@ -85,8 +91,19 @@ namespace RBS_IT_Project.Forms
             {
                 if (listViewStaff.SelectedItems.Count == 1)
                 {
-                    StaffSet staffSet = listViewStaff.SelectedItems[0].Tag as StaffSet;
-                    Program.RBS_Project.StaffSet.Remove(staffSet);
+                    StaffSet staff = listViewStaff.SelectedItems[0].Tag as StaffSet;
+                    bool found = false;
+                    Users user = new Users();
+                    foreach (Users users in Program.RBS_Project.Users)
+                    {
+                        if (staff.Id == users.Id_Staff)
+                        { found = true; user = users; }
+                    }
+                    if (found)
+                    {
+                        Program.RBS_Project.Users.Remove(user);
+                    }
+                    Program.RBS_Project.StaffSet.Remove(staff);
                     Program.RBS_Project.SaveChanges();
                     ShowStaff();
                 }
@@ -96,22 +113,29 @@ namespace RBS_IT_Project.Forms
                 textBoxPhone.Text = "";
                 textBoxEmail.Text = "";
                 textBoxPosition.Text = "";
-
+                comboBoxDepartment.SelectedItem = null;
             }
             catch { MessageBox.Show("Невозможно удалить, эта запись используется!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         void ShowStaff()
         {
             listViewStaff.Items.Clear();
-            foreach(StaffSet staff in Program.RBS_Project.StaffSet)
+            foreach (StaffSet staff in Program.RBS_Project.StaffSet)
             {
+                DepartmentsSet departmentsSet = new DepartmentsSet();
+                foreach (DepartmentsSet departments in Program.RBS_Project.DepartmentsSet)
+                {
+                    if (staff.Id_Department == departments.Id)
+                        departmentsSet = departments; 
+                }
                 ListViewItem item = new ListViewItem(new string[]
                 {
                     staff.Id.ToString(),
                     staff.LastName+" "+staff.FirstName+" "+staff.MiddleName,
                     staff.Phone,
                     staff.Email,
-                    staff.Position
+                    staff.Position,
+                    departmentsSet.Name
                 });
                 item.Tag = staff;
                 listViewStaff.Items.Add(item);
@@ -130,6 +154,7 @@ namespace RBS_IT_Project.Forms
                 textBoxPhone.Text = staff.Phone;
                 textBoxEmail.Text = staff.Email;
                 textBoxPosition.Text = staff.Position;
+                comboBoxDepartment.SelectedIndex = comboBoxDepartment.FindString(staff.Id_Department.ToString());
             }
             else
             {
@@ -139,6 +164,7 @@ namespace RBS_IT_Project.Forms
                 textBoxPhone.Text = "";
                 textBoxEmail.Text = "";
                 textBoxPosition.Text = "";
+                comboBoxDepartment.SelectedItem = null;
             }
         }
 
@@ -154,7 +180,7 @@ namespace RBS_IT_Project.Forms
                     if (staff.Id == users.Id_Staff)
                     { found = true; user = users; }
                 }
-                if (found) 
+                if (found)
                 {
                     Form formChangePassword = new FormChangePassword(user);
                     formChangePassword.Show();
@@ -164,6 +190,15 @@ namespace RBS_IT_Project.Forms
                     Form formRegistration = new FormRegistration(staff);
                     formRegistration.Show();
                 }
+            }
+        }
+        void ShowDepartments()
+        {
+            comboBoxDepartment.Items.Clear();
+            foreach (DepartmentsSet departments in Program.RBS_Project.DepartmentsSet)
+            {
+                string[] item = { departments.Id.ToString() + ". ", departments.Name };
+                comboBoxDepartment.Items.Add(string.Join(" ", item));
             }
         }
     }

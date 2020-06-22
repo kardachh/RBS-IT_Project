@@ -54,6 +54,7 @@
             this.buttonRegister.Text = "Зарегестрироваться";
             this.buttonRegister.UseVisualStyleBackColor = false;
             this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            this.buttonRegister.KeyUp += new System.Windows.Forms.KeyEventHandler(this.buttonRegister_KeyUp);
             // 
             // textBoxPassword
             // 
@@ -63,6 +64,7 @@
             this.textBoxPassword.Size = new System.Drawing.Size(183, 26);
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.UseSystemPasswordChar = true;
+            this.textBoxPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.buttonRegister_KeyUp);
             // 
             // textBoxLogin
             // 
@@ -71,6 +73,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(183, 26);
             this.textBoxLogin.TabIndex = 1;
+            this.textBoxLogin.KeyUp += new System.Windows.Forms.KeyEventHandler(this.buttonRegister_KeyUp);
             // 
             // labelLogin
             // 
@@ -112,6 +115,7 @@
             this.textBoxRepeat.Size = new System.Drawing.Size(183, 26);
             this.textBoxRepeat.TabIndex = 3;
             this.textBoxRepeat.UseSystemPasswordChar = true;
+            this.textBoxRepeat.KeyUp += new System.Windows.Forms.KeyEventHandler(this.buttonRegister_KeyUp);
             // 
             // labelRepeat
             // 
@@ -145,6 +149,7 @@
             this.Name = "FormRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.buttonRegister_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

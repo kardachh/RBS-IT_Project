@@ -58,6 +58,9 @@
     <Compile Include="ClientsSet.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="DepartmentsSet.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAuthorization.cs">
       <SubType>Form</SubType>
     </Compile>

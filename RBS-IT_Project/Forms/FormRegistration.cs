@@ -23,10 +23,16 @@ namespace RBS_IT_Project.Forms
                     Program.RBS_Project.Users.Add(user);
                     Program.RBS_Project.SaveChanges();
                     MessageBox.Show("Пользователь зарегестрирован.", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
                 }
                 else MessageBox.Show("Пароли не совпадают", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else MessageBox.Show("Заполните все поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void buttonRegister_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) buttonRegister.PerformClick();
         }
     }
 }

@@ -13,10 +13,10 @@ namespace RBS_IT_Project
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities2 : DbContext
+    public partial class Entities : DbContext
     {
-        public Entities2()
-            : base("name=Entities2")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -26,6 +26,7 @@ namespace RBS_IT_Project
         }
     
         public virtual DbSet<ClientsSet> ClientsSet { get; set; }
+        public virtual DbSet<DepartmentsSet> DepartmentsSet { get; set; }
         public virtual DbSet<OrdersSet> OrdersSet { get; set; }
         public virtual DbSet<ServicesSet> ServicesSet { get; set; }
         public virtual DbSet<StaffSet> StaffSet { get; set; }

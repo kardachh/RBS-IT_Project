@@ -41,6 +41,9 @@
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NameOfService = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Department = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBoxDepartment = new System.Windows.Forms.ComboBox();
+            this.labelDepartment = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +113,7 @@
             this.textBoxName.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxName.Location = new System.Drawing.Point(12, 35);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(380, 25);
+            this.textBoxName.Size = new System.Drawing.Size(199, 25);
             this.textBoxName.TabIndex = 17;
             // 
             // textBoxPrice
@@ -136,6 +139,7 @@
             this.listViewServises.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
             this.NameOfService,
+            this.Department,
             this.Price});
             this.listViewServises.Font = new System.Drawing.Font("Open Sans", 10F);
             this.listViewServises.FullRowSelect = true;
@@ -163,12 +167,38 @@
             // 
             this.Price.Text = "Цена";
             // 
+            // Department
+            // 
+            this.Department.Text = "Отдел";
+            this.Department.Width = 104;
+            // 
+            // comboBoxDepartment
+            // 
+            this.comboBoxDepartment.Font = new System.Drawing.Font("Open Sans", 10F);
+            this.comboBoxDepartment.FormattingEnabled = true;
+            this.comboBoxDepartment.Location = new System.Drawing.Point(217, 34);
+            this.comboBoxDepartment.Name = "comboBoxDepartment";
+            this.comboBoxDepartment.Size = new System.Drawing.Size(219, 26);
+            this.comboBoxDepartment.TabIndex = 33;
+            // 
+            // labelDepartment
+            // 
+            this.labelDepartment.AutoSize = true;
+            this.labelDepartment.ForeColor = System.Drawing.Color.White;
+            this.labelDepartment.Location = new System.Drawing.Point(213, 8);
+            this.labelDepartment.Name = "labelDepartment";
+            this.labelDepartment.Size = new System.Drawing.Size(56, 22);
+            this.labelDepartment.TabIndex = 32;
+            this.labelDepartment.Text = "Отдел";
+            // 
             // FormServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(639, 336);
+            this.Controls.Add(this.comboBoxDepartment);
+            this.Controls.Add(this.labelDepartment);
             this.Controls.Add(this.listViewServises);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.labelPrice);
@@ -208,5 +238,8 @@
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader NameOfService;
         private System.Windows.Forms.ColumnHeader Price;
+        private System.Windows.Forms.ColumnHeader Department;
+        private System.Windows.Forms.ComboBox comboBoxDepartment;
+        private System.Windows.Forms.Label labelDepartment;
     }
 }

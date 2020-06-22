@@ -29,7 +29,11 @@ namespace RBS_IT_Project.Forms
                         users.login = user.Login;
                         users.password = user.Password;
                         users.type = user.Type;
-                        users.name = user.StaffSet.LastName+" "+user.StaffSet.FirstName.Remove(1)+"." + user.StaffSet.MiddleName.Remove(1) + ".";
+                        if (user.Id_Staff != null)
+                        {
+                            users.name = user.StaffSet.LastName + " " + user.StaffSet.FirstName.Remove(1) + "." + user.StaffSet.MiddleName.Remove(1) + ".";
+                        }
+                        else users.name = "admin";
                     }
                 }
                 if (!key)

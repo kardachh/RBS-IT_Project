@@ -37,8 +37,6 @@
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.comboBoxService = new System.Windows.Forms.ComboBox();
             this.labelService = new System.Windows.Forms.Label();
-            this.comboBoxStaff = new System.Windows.Forms.ComboBox();
-            this.labelStaff = new System.Windows.Forms.Label();
             this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
             this.labelDate = new System.Windows.Forms.Label();
             this.labelDeadline = new System.Windows.Forms.Label();
@@ -47,7 +45,7 @@
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Client = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Service = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Staff = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Department = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StartDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Deadline = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,9 +60,9 @@
             this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDelete.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonDelete.Location = new System.Drawing.Point(1067, 353);
+            this.buttonDelete.Location = new System.Drawing.Point(1030, 290);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(114, 40);
+            this.buttonDelete.Size = new System.Drawing.Size(151, 40);
             this.buttonDelete.TabIndex = 19;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = false;
@@ -76,9 +74,9 @@
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonEdit.Location = new System.Drawing.Point(947, 353);
+            this.buttonEdit.Location = new System.Drawing.Point(873, 290);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(114, 40);
+            this.buttonEdit.Size = new System.Drawing.Size(151, 40);
             this.buttonEdit.TabIndex = 18;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -90,9 +88,9 @@
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAdd.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonAdd.Location = new System.Drawing.Point(827, 353);
+            this.buttonAdd.Location = new System.Drawing.Point(716, 290);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(114, 40);
+            this.buttonAdd.Size = new System.Drawing.Size(151, 40);
             this.buttonAdd.TabIndex = 17;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -101,7 +99,7 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::RBS_IT_Project.Properties.Resources.logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 353);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 290);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(260, 40);
             this.pictureBoxLogo.TabIndex = 16;
@@ -143,28 +141,10 @@
             this.labelService.TabIndex = 22;
             this.labelService.Text = "Услуга";
             // 
-            // comboBoxStaff
-            // 
-            this.comboBoxStaff.Font = new System.Drawing.Font("Open Sans", 10F);
-            this.comboBoxStaff.FormattingEnabled = true;
-            this.comboBoxStaff.Location = new System.Drawing.Point(12, 144);
-            this.comboBoxStaff.Name = "comboBoxStaff";
-            this.comboBoxStaff.Size = new System.Drawing.Size(200, 26);
-            this.comboBoxStaff.TabIndex = 25;
-            // 
-            // labelStaff
-            // 
-            this.labelStaff.AutoSize = true;
-            this.labelStaff.Location = new System.Drawing.Point(8, 119);
-            this.labelStaff.Name = "labelStaff";
-            this.labelStaff.Size = new System.Drawing.Size(92, 22);
-            this.labelStaff.TabIndex = 24;
-            this.labelStaff.Text = "Сотрудник";
-            // 
             // dateTimePickerDate
             // 
             this.dateTimePickerDate.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.dateTimePickerDate.Location = new System.Drawing.Point(12, 198);
+            this.dateTimePickerDate.Location = new System.Drawing.Point(12, 144);
             this.dateTimePickerDate.Name = "dateTimePickerDate";
             this.dateTimePickerDate.Size = new System.Drawing.Size(200, 29);
             this.dateTimePickerDate.TabIndex = 26;
@@ -172,7 +152,7 @@
             // labelDate
             // 
             this.labelDate.AutoSize = true;
-            this.labelDate.Location = new System.Drawing.Point(8, 173);
+            this.labelDate.Location = new System.Drawing.Point(8, 119);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(168, 22);
             this.labelDate.TabIndex = 27;
@@ -181,7 +161,7 @@
             // labelDeadline
             // 
             this.labelDeadline.AutoSize = true;
-            this.labelDeadline.Location = new System.Drawing.Point(8, 230);
+            this.labelDeadline.Location = new System.Drawing.Point(8, 176);
             this.labelDeadline.Name = "labelDeadline";
             this.labelDeadline.Size = new System.Drawing.Size(159, 22);
             this.labelDeadline.TabIndex = 29;
@@ -190,7 +170,7 @@
             // dateTimePickerDeadline
             // 
             this.dateTimePickerDeadline.Font = new System.Drawing.Font("Open Sans", 12F);
-            this.dateTimePickerDeadline.Location = new System.Drawing.Point(12, 255);
+            this.dateTimePickerDeadline.Location = new System.Drawing.Point(12, 201);
             this.dateTimePickerDeadline.Name = "dateTimePickerDeadline";
             this.dateTimePickerDeadline.Size = new System.Drawing.Size(200, 29);
             this.dateTimePickerDeadline.TabIndex = 28;
@@ -201,7 +181,7 @@
             this.ID,
             this.Client,
             this.Service,
-            this.Staff,
+            this.Department,
             this.StartDate,
             this.Deadline,
             this.Status});
@@ -212,7 +192,7 @@
             this.listViewOrders.Location = new System.Drawing.Point(219, 12);
             this.listViewOrders.MultiSelect = false;
             this.listViewOrders.Name = "listViewOrders";
-            this.listViewOrders.Size = new System.Drawing.Size(962, 326);
+            this.listViewOrders.Size = new System.Drawing.Size(962, 272);
             this.listViewOrders.TabIndex = 30;
             this.listViewOrders.UseCompatibleStateImageBehavior = false;
             this.listViewOrders.View = System.Windows.Forms.View.Details;
@@ -230,10 +210,10 @@
             // 
             this.Service.Text = "Услуга";
             // 
-            // Staff
+            // Department
             // 
-            this.Staff.Text = "Сотрудник";
-            this.Staff.Width = 89;
+            this.Department.Text = "Отдел";
+            this.Department.Width = 89;
             // 
             // StartDate
             // 
@@ -257,7 +237,7 @@
             "Запланировано",
             "В процессе",
             "Выполнено"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(12, 312);
+            this.comboBoxStatus.Location = new System.Drawing.Point(12, 258);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(200, 26);
             this.comboBoxStatus.TabIndex = 31;
@@ -265,7 +245,7 @@
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(8, 287);
+            this.labelStatus.Location = new System.Drawing.Point(8, 233);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(59, 22);
             this.labelStatus.TabIndex = 32;
@@ -276,7 +256,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1189, 401);
+            this.ClientSize = new System.Drawing.Size(1189, 339);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.listViewOrders);
@@ -284,8 +264,6 @@
             this.Controls.Add(this.dateTimePickerDeadline);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.dateTimePickerDate);
-            this.Controls.Add(this.comboBoxStaff);
-            this.Controls.Add(this.labelStaff);
             this.Controls.Add(this.comboBoxService);
             this.Controls.Add(this.labelService);
             this.Controls.Add(this.comboBoxClient);
@@ -299,8 +277,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1205, 440);
-            this.MinimumSize = new System.Drawing.Size(1205, 440);
             this.Name = "FormOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заказы";
@@ -320,8 +296,6 @@
         private System.Windows.Forms.ComboBox comboBoxClient;
         private System.Windows.Forms.ComboBox comboBoxService;
         private System.Windows.Forms.Label labelService;
-        private System.Windows.Forms.ComboBox comboBoxStaff;
-        private System.Windows.Forms.Label labelStaff;
         private System.Windows.Forms.DateTimePicker dateTimePickerDate;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Label labelDeadline;
@@ -330,7 +304,7 @@
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Client;
         private System.Windows.Forms.ColumnHeader Service;
-        private System.Windows.Forms.ColumnHeader Staff;
+        private System.Windows.Forms.ColumnHeader Department;
         private System.Windows.Forms.ColumnHeader StartDate;
         private System.Windows.Forms.ColumnHeader Deadline;
         private System.Windows.Forms.ComboBox comboBoxStatus;
