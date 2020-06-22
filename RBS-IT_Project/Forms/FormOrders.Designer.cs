@@ -256,7 +256,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1189, 339);
+            this.ClientSize = new System.Drawing.Size(1189, 336);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.listViewOrders);
@@ -277,6 +277,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1205, 375);
+            this.MinimumSize = new System.Drawing.Size(1205, 375);
             this.Name = "FormOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заказы";

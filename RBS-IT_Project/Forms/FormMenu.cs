@@ -1,5 +1,6 @@
 ﻿using RBS_IT_Project.Forms;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace RBS_IT_Project
@@ -51,6 +52,20 @@ namespace RBS_IT_Project
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void buttonExit_MouseMove(object sender, MouseEventArgs e)
+        {
+            buttonExit.BackColor = Color.Red;
+        }
+
+        private void buttonExit_MouseLeave(object sender, EventArgs e)
+        {
+            buttonExit.BackColor = Color.DarkRed;
+        }
+
+        private void buttonOpenClients_MouseMove(object sender, MouseEventArgs e)
+        {
+            BackColor = ;
         }
     }
 

@@ -114,5 +114,15 @@ namespace RBS_IT_Project.Forms
             }
             department.Count = count;
         }
+
+        private void listViewDepartments_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (listViewDepartments.SelectedItems.Count == 1)
+            {
+                DepartmentsSet departmentsSet = listViewDepartments.SelectedItems[0].Tag as DepartmentsSet;
+                Form formInfo = new FormInfo(departmentsSet);
+                formInfo.Show();
+            }
+        }
     }
 }

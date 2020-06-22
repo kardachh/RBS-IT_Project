@@ -154,7 +154,8 @@ namespace RBS_IT_Project.Forms
                 textBoxPhone.Text = staff.Phone;
                 textBoxEmail.Text = staff.Email;
                 textBoxPosition.Text = staff.Position;
-                comboBoxDepartment.SelectedIndex = comboBoxDepartment.FindString(staff.Id_Department.ToString());
+                if (staff.Id_Department != null)
+                    comboBoxDepartment.SelectedIndex = comboBoxDepartment.FindString(staff.Id_Department.ToString());
             }
             else
             {

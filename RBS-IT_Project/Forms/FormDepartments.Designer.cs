@@ -150,6 +150,7 @@
             this.listViewDepartments.UseCompatibleStateImageBehavior = false;
             this.listViewDepartments.View = System.Windows.Forms.View.Details;
             this.listViewDepartments.SelectedIndexChanged += new System.EventHandler(this.listViewDepartments_SelectedIndexChanged);
+            this.listViewDepartments.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewDepartments_MouseDoubleClick);
             // 
             // ID
             // 
@@ -176,7 +177,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(644, 416);
+            this.ClientSize = new System.Drawing.Size(639, 411);
             this.Controls.Add(this.listViewDepartments);
             this.Controls.Add(this.comboBoxManager);
             this.Controls.Add(this.labelManager);
@@ -190,6 +191,9 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(655, 450);
+            this.MinimumSize = new System.Drawing.Size(655, 450);
             this.Name = "FormDepartments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отделы";

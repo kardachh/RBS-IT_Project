@@ -64,7 +64,7 @@
             this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDelete.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonDelete.Location = new System.Drawing.Point(815, 413);
+            this.buttonDelete.Location = new System.Drawing.Point(985, 401);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(141, 40);
             this.buttonDelete.TabIndex = 15;
@@ -78,7 +78,7 @@
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonEdit.Location = new System.Drawing.Point(668, 413);
+            this.buttonEdit.Location = new System.Drawing.Point(838, 401);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(141, 40);
             this.buttonEdit.TabIndex = 14;
@@ -92,7 +92,7 @@
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAdd.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonAdd.Location = new System.Drawing.Point(521, 413);
+            this.buttonAdd.Location = new System.Drawing.Point(691, 401);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(141, 40);
             this.buttonAdd.TabIndex = 13;
@@ -103,7 +103,7 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::RBS_IT_Project.Properties.Resources.logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(17, 413);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(17, 401);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(260, 40);
             this.pictureBoxLogo.TabIndex = 12;
@@ -233,7 +233,7 @@
             this.listViewStaff.Location = new System.Drawing.Point(212, 13);
             this.listViewStaff.MultiSelect = false;
             this.listViewStaff.Name = "listViewStaff";
-            this.listViewStaff.Size = new System.Drawing.Size(744, 382);
+            this.listViewStaff.Size = new System.Drawing.Size(914, 382);
             this.listViewStaff.TabIndex = 28;
             this.listViewStaff.UseCompatibleStateImageBehavior = false;
             this.listViewStaff.View = System.Windows.Forms.View.Details;
@@ -274,7 +274,7 @@
             this.buttonRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(182)))), ((int)(((byte)(103)))));
             this.buttonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonRegistration.Font = new System.Drawing.Font("Open Sans", 14F);
-            this.buttonRegistration.Location = new System.Drawing.Point(374, 413);
+            this.buttonRegistration.Location = new System.Drawing.Point(544, 401);
             this.buttonRegistration.Name = "buttonRegistration";
             this.buttonRegistration.Size = new System.Drawing.Size(141, 40);
             this.buttonRegistration.TabIndex = 29;
@@ -306,7 +306,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(968, 465);
+            this.ClientSize = new System.Drawing.Size(1134, 451);
             this.Controls.Add(this.comboBoxDepartment);
             this.Controls.Add(this.labelDepartment);
             this.Controls.Add(this.buttonRegistration);
@@ -332,7 +332,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1150, 490);
+            this.MinimumSize = new System.Drawing.Size(1150, 490);
             this.Name = "FormStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сотрудники";
