@@ -9,6 +9,22 @@ namespace RBS_IT_Project.Forms
         {
             InitializeComponent();
             ShowServices();
+            if (FormAuthorization.users.type != "admin")
+            {
+                buttonAdd.Enabled = false;
+                buttonEdit.Enabled = false;
+                buttonDelete.Enabled = false;
+                textBoxName.Enabled = false;
+                textBoxPrice.Enabled = false;
+            }
+            else
+            {
+                buttonAdd.Enabled = true;
+                buttonEdit.Enabled = true;
+                buttonDelete.Enabled = true;
+                textBoxName.Enabled = true;
+                textBoxPrice.Enabled = true;
+            }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

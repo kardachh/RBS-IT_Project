@@ -72,6 +72,12 @@ namespace RBS_IT_Project.Forms
                     Program.RBS_Project.SaveChanges();
                     ShowOrders();
                 }
+                comboBoxClient.SelectedItem = null;
+                comboBoxService.SelectedItem = null;
+                comboBoxStaff.SelectedItem = null;
+                comboBoxStatus.SelectedItem = null;
+                dateTimePickerDate.Value = DateTime.Now;
+                dateTimePickerDeadline.Value = DateTime.Now;
             }
             catch { MessageBox.Show("Невозможно удалить, эта запись используется!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
