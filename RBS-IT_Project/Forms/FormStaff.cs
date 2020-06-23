@@ -22,6 +22,7 @@ namespace RBS_IT_Project.Forms
                 textBoxPhone.Enabled = false;
                 textBoxEmail.Enabled = false;
                 textBoxPosition.Enabled = false;
+                comboBoxDepartment.Enabled = false;
             }
             else
             {
@@ -35,6 +36,7 @@ namespace RBS_IT_Project.Forms
                 textBoxPhone.Enabled = true;
                 textBoxEmail.Enabled = true;
                 textBoxPosition.Enabled = true;
+                comboBoxDepartment.Enabled = true;
             }
         }
 

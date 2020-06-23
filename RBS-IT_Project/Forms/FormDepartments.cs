@@ -10,6 +10,22 @@ namespace RBS_IT_Project.Forms
             InitializeComponent();
             ShowManager();
             ShowDepartments();
+            if (FormAuthorization.users.type != "admin")
+            {
+                buttonAdd.Enabled = false;
+                buttonEdit.Enabled = false;
+                buttonDelete.Enabled = false;
+                comboBoxManager.Enabled = false;
+                textBoxName.Enabled = false;
+            }
+            else
+            {
+                buttonAdd.Enabled = true;
+                buttonEdit.Enabled = true;
+                buttonDelete.Enabled = true;
+                comboBoxManager.Enabled = true;
+                textBoxName.Enabled = true;
+            }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

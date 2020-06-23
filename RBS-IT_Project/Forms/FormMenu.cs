@@ -62,11 +62,6 @@ namespace RBS_IT_Project
         {
             buttonExit.BackColor = Color.DarkRed;
         }
-
-        private void buttonOpenClients_MouseMove(object sender, MouseEventArgs e)
-        {
-            BackColor = ;
-        }
     }
 
 }

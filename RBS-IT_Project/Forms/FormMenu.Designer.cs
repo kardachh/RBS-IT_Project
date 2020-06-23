@@ -53,7 +53,6 @@
             this.buttonOpenStaff.Text = "Сотрудники";
             this.buttonOpenStaff.UseVisualStyleBackColor = false;
             this.buttonOpenStaff.Click += new System.EventHandler(this.buttonOpenStaff_Click);
-            this.buttonOpenStaff.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonOpenClients_MouseMove);
             // 
             // buttonOpenOrders
             // 
@@ -68,7 +67,6 @@
             this.buttonOpenOrders.Text = "Заказы";
             this.buttonOpenOrders.UseVisualStyleBackColor = false;
             this.buttonOpenOrders.Click += new System.EventHandler(this.buttonOpenOrders_Click);
-            this.buttonOpenOrders.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonOpenClients_MouseMove);
             // 
             // buttonOpenServiсes
             // 
@@ -83,7 +81,6 @@
             this.buttonOpenServiсes.Text = "Услуги";
             this.buttonOpenServiсes.UseVisualStyleBackColor = false;
             this.buttonOpenServiсes.Click += new System.EventHandler(this.buttonOpenServiсes_Click);
-            this.buttonOpenServiсes.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonOpenClients_MouseMove);
             // 
             // buttonOpenDepartments
             // 
@@ -98,7 +95,6 @@
             this.buttonOpenDepartments.Text = "Отделы";
             this.buttonOpenDepartments.UseVisualStyleBackColor = false;
             this.buttonOpenDepartments.Click += new System.EventHandler(this.buttonOpenDepartments_Click);
-            this.buttonOpenDepartments.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonOpenClients_MouseMove);
             // 
             // buttonOpenClients
             // 
@@ -113,7 +109,6 @@
             this.buttonOpenClients.Text = "Клиенты";
             this.buttonOpenClients.UseVisualStyleBackColor = false;
             this.buttonOpenClients.Click += new System.EventHandler(this.buttonOpenClients_Click);
-            this.buttonOpenClients.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonOpenClients_MouseMove);
             // 
             // pictureBoxLogo
             // 
