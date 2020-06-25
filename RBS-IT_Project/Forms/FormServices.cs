@@ -19,6 +19,7 @@ namespace RBS_IT_Project.Forms
                 buttonDelete.Enabled = false;
                 textBoxName.Enabled = false;
                 textBoxPrice.Enabled = false;
+                comboBoxDepartment.Enabled = false;
             }
             else
             {
@@ -27,6 +28,7 @@ namespace RBS_IT_Project.Forms
                 buttonDelete.Enabled = true;
                 textBoxName.Enabled = true;
                 textBoxPrice.Enabled = true;
+                comboBoxDepartment.Enabled = true;
             }
         }
 
