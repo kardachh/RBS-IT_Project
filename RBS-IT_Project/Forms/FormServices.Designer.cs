@@ -40,8 +40,8 @@
             this.listViewServises = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NameOfService = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Department = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBoxDepartment = new System.Windows.Forms.ComboBox();
             this.labelDepartment = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -123,6 +123,7 @@
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(189, 25);
             this.textBoxPrice.TabIndex = 19;
+            this.textBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrice_KeyPress);
             // 
             // labelPrice
             // 
@@ -163,14 +164,14 @@
             this.NameOfService.Text = "Название услуги";
             this.NameOfService.Width = 156;
             // 
-            // Price
-            // 
-            this.Price.Text = "Цена";
-            // 
             // Department
             // 
             this.Department.Text = "Отдел";
             this.Department.Width = 104;
+            // 
+            // Price
+            // 
+            this.Price.Text = "Цена";
             // 
             // comboBoxDepartment
             // 
@@ -218,6 +219,7 @@
             this.Name = "FormServices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Услуги";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormServices_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

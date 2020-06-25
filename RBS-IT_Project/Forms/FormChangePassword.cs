@@ -4,7 +4,7 @@ namespace RBS_IT_Project.Forms
 {
     public partial class FormChangePassword : Form
     {
-        Users user = new Users();
+        private Users user;
         public FormChangePassword(Users user)
         {
             InitializeComponent();

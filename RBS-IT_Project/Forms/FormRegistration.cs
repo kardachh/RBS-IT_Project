@@ -4,7 +4,7 @@ namespace RBS_IT_Project.Forms
 {
     public partial class FormRegistration : Form
     {
-        Users user = new Users();
+        private Users user = new Users();
         public FormRegistration(StaffSet staff)
         {
             InitializeComponent();

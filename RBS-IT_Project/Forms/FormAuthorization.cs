@@ -44,7 +44,7 @@ namespace RBS_IT_Project.Forms
                 {
                     FormMenu menu = new FormMenu(this);
                     menu.Show();
-                    this.Hide();
+                    Hide();
                     textBoxPassword.Text = "";
                 }
             }

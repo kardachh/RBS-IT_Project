@@ -5,9 +5,11 @@ namespace RBS_IT_Project.Forms
 {
     public partial class FormOrders : Form
     {
-        public FormOrders()
+        private FormMenu formMenu;
+        public FormOrders(FormMenu formMenu)
         {
             InitializeComponent();
+            this.formMenu = formMenu;
             ShowClients();
             ShowService();
             ShowOrders();
@@ -135,6 +137,11 @@ namespace RBS_IT_Project.Forms
                 dateTimePickerDate.Value = DateTime.Now;
                 dateTimePickerDeadline.Value = DateTime.Now;
             }
+        }
+
+        private void FormOrders_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formMenu.Show();
         }
     }
 }

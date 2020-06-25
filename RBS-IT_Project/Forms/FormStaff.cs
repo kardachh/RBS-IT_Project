@@ -5,10 +5,12 @@ namespace RBS_IT_Project.Forms
 {
     public partial class FormStaff : Form
     {
-        public FormStaff()
+        private FormMenu formMenu;
+        public FormStaff(FormMenu formMenu)
         {
             InitializeComponent();
             ShowStaff();
+            this.formMenu = formMenu;
             ShowDepartments();
             if (FormAuthorization.users.type != "admin")
             {
@@ -203,6 +205,11 @@ namespace RBS_IT_Project.Forms
                 string[] item = { departments.Id.ToString() + ". ", departments.Name };
                 comboBoxDepartment.Items.Add(string.Join(" ", item));
             }
+        }
+
+        private void FormStaff_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formMenu.Show();
         }
     }
 }

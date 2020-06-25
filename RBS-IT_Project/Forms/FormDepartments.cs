@@ -5,10 +5,12 @@ namespace RBS_IT_Project.Forms
 {
     public partial class FormDepartments : Form
     {
-        public FormDepartments()
+        private FormMenu formMenu;
+        public FormDepartments(FormMenu formMenu)
         {
             InitializeComponent();
             ShowManager();
+            this.formMenu = formMenu;
             ShowDepartments();
             if (FormAuthorization.users.type != "admin")
             {
@@ -83,8 +85,7 @@ namespace RBS_IT_Project.Forms
             {
                 DepartmentsSet departmentsSet = listViewDepartments.SelectedItems[0].Tag as DepartmentsSet;
                 textBoxName.Text = departmentsSet.Name;
-                if (departmentsSet.Manager != null)
-                    comboBoxManager.SelectedIndex = comboBoxManager.FindString(departmentsSet.Id.ToString());
+                comboBoxManager.SelectedItem = departmentsSet.Manager;
             }
             else
             {
@@ -97,8 +98,7 @@ namespace RBS_IT_Project.Forms
             comboBoxManager.Items.Clear();
             foreach(StaffSet staff in Program.RBS_Project.StaffSet)
             {
-                string[] item = { staff.Id.ToString()+". ", staff.LastName,
-                staff.FirstName.Remove(1)+".",staff.MiddleName.Remove(1)+"."};
+                string[] item = {staff.LastName, staff.FirstName.Remove(1)+".",staff.MiddleName.Remove(1)+"."};
                 comboBoxManager.Items.Add(string.Join(" ", item));
             }
         }
@@ -139,6 +139,11 @@ namespace RBS_IT_Project.Forms
                 Form formInfo = new FormInfo(departmentsSet);
                 formInfo.Show();
             }
+        }
+
+        private void FormDepartments_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formMenu.Show();
         }
     }
 }

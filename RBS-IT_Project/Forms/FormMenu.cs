@@ -16,26 +16,30 @@ namespace RBS_IT_Project
         }
         private void buttonOpenClients_Click(object sender, EventArgs e)
         {
-            Form formClients = new FormClients();
+            Form formClients = new FormClients(this);
             formClients.Show();
+            Hide();
         }
 
         private void buttonOpenStaff_Click(object sender, EventArgs e)
         {
-            Form formStaff = new FormStaff();
+            Form formStaff = new FormStaff(this);
             formStaff.Show();
+            Hide();
         }
 
         private void buttonOpenServiсes_Click(object sender, EventArgs e)
         {
-            Form formServices = new FormServices();
+            Form formServices = new FormServices(this);
             formServices.Show();
+            Hide();
         }
 
         private void buttonOpenOrders_Click(object sender, EventArgs e)
         {
-            Form formOrders = new FormOrders();
+            Form formOrders = new FormOrders(this);
             formOrders.Show();
+            Hide();
         }
 
         private void FormMenu_FormClosed(object sender, FormClosedEventArgs e)
@@ -45,8 +49,9 @@ namespace RBS_IT_Project
 
         private void buttonOpenDepartments_Click(object sender, EventArgs e)
         {
-            Form formDepartments = new FormDepartments();
+            Form formDepartments = new FormDepartments(this);
             formDepartments.Show();
+            Hide();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

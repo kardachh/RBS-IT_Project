@@ -5,12 +5,14 @@ namespace RBS_IT_Project.Forms
 {
     public partial class FormClients : Form
     {
-        public FormClients()
+        FormMenu formMenu;
+        public FormClients(FormMenu formMenu)
         {
             InitializeComponent();
+            this.formMenu = formMenu;
             ShowClients();
         }
-
+        
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             if (textBoxName.Text != "" && textBoxPhone.Text != "" && textBoxEmail.Text != "")
@@ -96,6 +98,11 @@ namespace RBS_IT_Project.Forms
             {
                 MessageBox.Show("Невозможно удалить, эта запись используется!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FormClients_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formMenu.Show();
         }
     }
 }

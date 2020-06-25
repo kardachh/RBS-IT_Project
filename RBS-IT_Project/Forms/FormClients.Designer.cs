@@ -221,6 +221,7 @@
             this.Name = "FormClients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Клиенты";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormClients_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

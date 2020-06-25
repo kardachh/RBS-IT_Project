@@ -40,8 +40,8 @@
             this.listViewDepartments = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NameOfDepartment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Manager = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Manager = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,15 +162,15 @@
             this.NameOfDepartment.Text = "Название отдела";
             this.NameOfDepartment.Width = 125;
             // 
-            // Manager
-            // 
-            this.Manager.Text = "Руководитель";
-            this.Manager.Width = 118;
-            // 
             // Count
             // 
             this.Count.Text = "Количество сотрудников";
             this.Count.Width = 174;
+            // 
+            // Manager
+            // 
+            this.Manager.Text = "Руководитель";
+            this.Manager.Width = 118;
             // 
             // FormDepartments
             // 
@@ -197,6 +197,7 @@
             this.Name = "FormDepartments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отделы";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDepartments_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -5,9 +5,11 @@ namespace RBS_IT_Project.Forms
 {
     public partial class FormServices : Form
     {
-        public FormServices()
+        private FormMenu formMenu;
+        public FormServices(FormMenu formMenu)
         {
             InitializeComponent();
+            this.formMenu = formMenu;
             ShowServices();
             ShowDepartments();
             if (FormAuthorization.users.type != "admin")
@@ -118,6 +120,20 @@ namespace RBS_IT_Project.Forms
             {
                 string[] item = { departments.Id.ToString() + ". ", departments.Name };
                 comboBoxDepartment.Items.Add(string.Join(" ", item));
+            }
+        }
+
+        private void FormServices_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formMenu.Show();
+        }
+
+        private void textBoxPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8) //цифры и backspace
+            {
+                e.Handled = true;
             }
         }
     }
